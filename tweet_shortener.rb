@@ -18,7 +18,7 @@ def word_substituter(tweets)
   parts = tweets.split
   parts.each_with_index do |ele, idx|
     dictionary.each do |k, v|
-      if ele == k || ele == k.capitalize
+      if ele == k.to_s || ele == k.capitalize.to_s
         parts[idx] = v
       end
     end
