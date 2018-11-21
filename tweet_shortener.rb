@@ -1,16 +1,16 @@
 # Write your code here.
 def dictionary
   slang = {
-    "hello" => 'hi',
-    "to" => '2',
-    "two" => '2',
-    "too" => '2',
-    "for" => '4',
-    "four" => '4',
-    "be" => 'b',
-    "you" => 'u',
-    "at" => "@",
-    "and" => "&"
+    hello: 'hi',
+    to: '2',
+    two: '2',
+    too: '2',
+    for: '4',
+    four: '4',
+    be: 'b',
+    you: 'u',
+    at: "@",
+    and: "&"
   }
 end
 
@@ -18,7 +18,7 @@ def word_substituter(tweets)
   parts = tweets.split
   parts.each_with_index do |ele, idx|
     dictionary.each do |k, v|
-      if ele == k || ele == k.capitalize
+      if ele == k.to_s || ele == k.capitalize.to_s
         parts[idx] = v
       end
     end
